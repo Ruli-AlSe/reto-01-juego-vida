@@ -60,11 +60,16 @@ end
 game = GameOfLife.new(10)
 game.populate
 game.print_world
-game.next_step
-puts "_____________________"
-puts "Neighborhood Matrix"
-game.print_neighborhood
-puts "---------------------"
-puts "Next generation"
-game.find_life
-game.print_world
+idx = 1
+
+while(idx <= 20) do
+  game.next_step
+  puts "\n\n_____________________ iteration: #{idx}"
+  puts 'Neighborhood Matrix'
+  game.print_neighborhood
+  puts '---------------------'
+  puts 'Next generation'
+  game.find_life
+  game.print_world
+  idx += 1
+end
